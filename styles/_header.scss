@@ -1,0 +1,199 @@
+.header {
+    position: absolute;
+    top: toRem(20);
+    left: toRem(20);
+    min-width: calc(100% - toRem(40));
+    color: #fff;
+    padding-block-start: toRem(20);
+    // .header__container
+
+    &__container {
+        padding-block: toRem(7.5);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        column-gap: toRem(61);
+
+        @media (max-width: $tablet) {
+            justify-content: space-between;
+        }
+    }
+    // .header__menu
+    &__menu {
+        flex-grow: 1;
+        display: flex;
+        // flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-content: center;
+        column-gap: toRem(40);
+        row-gap: toRem(10);
+        transition: transform 0.4s;
+
+        @media (max-width: $tablet) {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100svh;
+            transform: translateX(100%);
+            background-color: $greyColor;
+            flex-direction: column;
+            align-items: stretch;
+            flex-wrap: nowrap;
+            row-gap: toRem(60);
+            padding-block-start: toRem(130);
+            padding-block-end: toRem(40);
+            padding-inline: toRem(40);
+            & .button {
+                font-size: toRem(22);
+                padding: toRem(20) toRem(30);
+            }
+            body._active & {
+                transform: translateX(0);
+            }
+        }
+    }
+    // .header__nav
+
+    &__nav {
+        flex-grow: 1;
+        @media (max-width: $tablet) {
+            // width: 100%;
+            max-height: 80svh;
+            overflow-y: auto;
+        }
+    }
+
+    // .header__actions
+
+    &__actions {
+        display: flex;
+        @media (max-width: $tablet) {
+            justify-content: center;
+            order: -1;
+        }
+    }
+}
+.logo {
+    display: flex;
+    column-gap: toRem(7);
+    align-items: center;
+    position: relative;
+    z-index: 50;
+    &::before {
+        content: "";
+        width: toRem(30);
+        height: toRem(30);
+        background: url(../images/icons/logomark.svg) center/contain no-repeat;
+    }
+
+    // .logo__text
+
+    &__text {
+        font-size: toRem(19);
+        color: #fff;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+}
+.navigation {
+    // .navigation__list
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: toRem(48);
+        row-gap: toRem(10);
+        @media (max-width: $tablet) {
+            font-size: toRem(32);
+            flex-direction: column;
+            row-gap: toRem(48);
+        }
+    }
+
+    // .navigation__item
+
+    &__item {
+    }
+
+    // .navigation__link
+
+    &__link {
+        will-change: transform, text-decoration;
+        transition: transform 0.3s;
+        text-transform: capitalize;
+        position: relative;
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: translateY(-20%);
+                text-decoration: underline;
+            }
+        }
+    }
+    @media (max-width: $tablet) {
+    }
+}
+.actions {
+    display: flex;
+    column-gap: toRem(12);
+    // .actions__button
+
+    &__button {
+    }
+}
+.burger {
+    flex-shrink: 0;
+    width: toRem(40);
+    height: toRem(40);
+    position: relative;
+    z-index: 50;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: toRem(4);
+    span {
+        display: inline-block;
+    }
+    &::before,
+    &::after {
+        content: "";
+        transform-origin: center;
+        transition: all 0.3s;
+    }
+    &::before,
+    &::after,
+    & span {
+        width: 60%;
+        height: toRem(2);
+        background-color: #fff;
+        border-radius: toRem(4);
+    }
+    span {
+        transition: all 0.6s;
+    }
+
+    body._active & {
+        & span {
+            width: 0;
+            transition: all 0.1s;
+        }
+        &::before,
+        &::after,
+        & span {
+            position: absolute;
+        }
+        &::before {
+            transform: rotate(40deg);
+        }
+        &::after {
+            transform: rotate(-40deg);
+        }
+    }
+    @media (max-width: $tablet) {
+        display: flex;
+    }
+}

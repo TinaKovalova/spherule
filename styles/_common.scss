@@ -1,0 +1,29 @@
+.button {
+    padding: toRem(12) toRem(20);
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    border-radius: toRem(40);
+    border: toRem(1) solid transparent;
+    transition: all 0.3s;
+
+    &--dark {
+        background-color: #000;
+    }
+    &--gray-border {
+        border-color: $greyColor;
+        color: $greyColor;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            border-color: #fff;
+            &.button--dark {
+                background-color: transparent;
+            }
+            &.button--gray-border {
+                border-color: #000;
+                color: #000;
+            }
+        }
+    }
+}

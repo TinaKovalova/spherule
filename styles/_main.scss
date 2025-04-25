@@ -1,0 +1,10 @@
+.hero {
+    // .hero__container
+
+    &__container {
+        border-radius: toRem(16);
+        padding-block: toRem(40);
+        background-color: $greyColor;
+        min-height: calc(100svh - toRem(40));
+    }
+}
