@@ -54,12 +54,10 @@
 
     &__header {
         max-width: toRem(652);
+        row-gap: toRem(24);
         & .section-header__title {
             @include adaptiveValue("font-size", 66, 36);
             font-weight: 600;
-            &:not(:last-child) {
-                margin-bottom: toRem(24);
-            }
         }
         & .section-header__text {
             @include adaptiveValue("font-size", 16, 14);
@@ -114,5 +112,108 @@
 
     &__description {
         @include adaptiveValue("font-size", 18, 16);
+    }
+}
+
+// Explore section
+.explore {
+    padding-block: toRem(80);
+    @media (max-width: $mobile) {
+        padding-block: toRem(48);
+    }
+    // .explore__container
+
+    &__container {
+        &:not(:last-child) {
+            margin-bottom: toRem(40);
+        }
+        @media (max-width: $mobile) {
+            &:not(:last-child) {
+                margin-bottom: toRem(32);
+            }
+        }
+    }
+
+    // .explore__header
+
+    &__header {
+        max-width: toRem(608);
+        margin: 0 auto;
+
+        @media (min-width: $tablet) {
+            row-gap: toRem(24);
+        }
+    }
+}
+.explore-swiper {
+    @media (max-width: 1439.98px) {
+        width: 100vw;
+        transform: translateX(toRem(-20));
+    }
+    @media (max-width: $mobile) {
+        transform: translateX(toRem(-16));
+    }
+    &__container {
+        position: relative;
+        @media (max-width: 1439.98px) {
+            padding: 0;
+            margin: 0;
+            max-width: 100%;
+        }
+    }
+
+    & .swiper {
+        position: static;
+        max-width: 100%;
+        height: max-content;
+    }
+
+    & .swiper-slide {
+        width: toRem(430);
+        min-height: toRem(400);
+        @media (max-width: $mobile) {
+            width: toRem(300);
+            min-height: toRem(270);
+        }
+        @media (max-width: 370px) {
+            width: toRem(272);
+            & .adventure-card {
+                aspect-ratio: 272 / 270;
+            }
+        }
+    }
+
+    & .button-prev,
+    & .button-next {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        transform: translateY(-50%);
+        width: toRem(34);
+        height: toRem(34);
+        border-radius: 50%;
+        border: toRem(2) solid #fff;
+        background:
+            url("../images/icons/arrow.svg") center/toRem(8) toRem(14) no-repeat,
+            #000;
+        transition: background-color 0.3s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $greyColor;
+            }
+        }
+    }
+    & .button-prev {
+        left: toRem(14);
+        @media (max-width: 1439.98px) {
+            left: toRem(31);
+        }
+    }
+    & .button-next {
+        transform: translateY(-50%) rotate(180deg);
+        right: toRem(14);
+        @media (max-width: 1439.98px) {
+            right: toRem(31);
+        }
     }
 }

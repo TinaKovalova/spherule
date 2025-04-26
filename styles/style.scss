@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     padding: toRem(20);
     @media (max-width: $mobile) {
-        padding-inline: toRem(16);
+        padding: toRem(16);
     }
 }
 .wrapper > main {
