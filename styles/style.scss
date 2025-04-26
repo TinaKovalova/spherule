@@ -9,6 +9,10 @@ html {
 
 body {
     font-family: "DM Sans", sans-serif;
+    line-height: 1.2;
+    &._active {
+        overflow: hidden;
+    }
 }
 .wrapper {
     min-height: 100%;
@@ -16,6 +20,9 @@ body {
     display: flex;
     flex-direction: column;
     padding: toRem(20);
+    @media (max-width: $mobile) {
+        padding-inline: toRem(16);
+    }
 }
 .wrapper > main {
     flex-grow: 1;

@@ -1,5 +1,6 @@
 .header {
     position: absolute;
+    z-index: 1000;
     top: toRem(20);
     left: toRem(20);
     min-width: calc(100% - toRem(40));
@@ -37,19 +38,26 @@
             height: 100svh;
             transform: translateX(100%);
             background-color: $greyColor;
+
             flex-direction: column;
             align-items: stretch;
             flex-wrap: nowrap;
             row-gap: toRem(60);
             padding-block-start: toRem(130);
-            padding-block-end: toRem(40);
-            padding-inline: toRem(40);
+            padding-block-end: toRem(20);
+            padding-inline: toRem(20);
+
             & .button {
                 font-size: toRem(22);
                 padding: toRem(20) toRem(30);
             }
             body._active & {
                 transform: translateX(0);
+            }
+
+            @media (max-width: $mobile) {
+                padding-block-end: toRem(16);
+                padding-inline: toRem(16);
             }
         }
     }
@@ -79,7 +87,7 @@
     column-gap: toRem(7);
     align-items: center;
     position: relative;
-    z-index: 50;
+
     &::before {
         content: "";
         width: toRem(30);
@@ -149,7 +157,6 @@
     width: toRem(40);
     height: toRem(40);
     position: relative;
-    z-index: 50;
     display: none;
     flex-direction: column;
     align-items: center;

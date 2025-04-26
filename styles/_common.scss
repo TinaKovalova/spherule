@@ -27,3 +27,24 @@
         }
     }
 }
+.section-header {
+    // .section-header__title
+
+    &__title {
+        @include adaptiveValue("font-size", 40, 32);
+        font-weight: 500;
+        line-height: 1.2;
+        &:not(:last-child) {
+            margin-bottom: toRem(16);
+        }
+    }
+
+    // .section-header__text
+
+    &__text {
+        @include adaptiveValue("font-size", 18, 16);
+    }
+    &--centered {
+        text-align: center;
+    }
+}
