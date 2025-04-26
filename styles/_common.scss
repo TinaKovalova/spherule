@@ -43,6 +43,7 @@
 
     &__text {
         @include adaptiveValue("font-size", 18, 16);
+ 
     }
     &--centered {
         align-items: center;
@@ -52,7 +53,6 @@
 .adventure-card {
     aspect-ratio: 430 / 400;
     font-size: 0;
-     
 
     // .adventure-card__link
 

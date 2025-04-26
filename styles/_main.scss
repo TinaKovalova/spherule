@@ -217,3 +217,100 @@
         }
     }
 }
+
+//guide section
+.guide {
+    // .guide__container
+
+    &__container {
+        padding-block: toRem(80);
+        @media (max-width: $mobile) {
+            padding-block: toRem(48);
+        }
+    }
+
+    // .guide__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(48);
+        @media (max-width: $mobile) {
+            row-gap: toRem(32);
+        }
+    }
+
+    // .guide__header
+
+    &__header {
+        & .section-header__text {
+            @include adaptiveValue("font-size", 16, 14);
+            color: $greyColor;
+        }
+    }
+
+    // .guide__list
+
+    &__list {
+    }
+
+    // .guide__item
+
+    &__item {
+    }
+
+    // .guide__item--destination
+
+    &__item--destination {
+    }
+
+    // .guide__item-text
+
+    &__item-text {
+    }
+
+    // .guide__title
+
+    &__title {
+    }
+
+    // .guide__description
+
+    &__description {
+    }
+
+    // .guide__item--luggage
+
+    &__item--luggage {
+    }
+
+    // .guide__item--route
+
+    &__item--route {
+    }
+
+    // .guide__image-block
+
+    &__image-block {
+    }
+
+    // .guide__image
+
+    &__image {
+    }
+}
+.section-header {
+    // .section-header__title
+
+    &__title {
+    }
+
+    // .section-header__text
+
+    &__text {
+    }
+}
+.button {
+}
+.button--dark {
+}
