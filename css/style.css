@@ -922,10 +922,6 @@ body._active .burger::after {
 @media (max-width: 767.98px) {
   .guide__container {
     padding-block: 3rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .guide__container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }

@@ -227,8 +227,6 @@
         gap: toRem(32);
         @media (max-width: $mobile) {
             padding-block: toRem(48);
-        }
-        @media (max-width: $mobile) {
             flex-wrap: wrap;
         }
     }
