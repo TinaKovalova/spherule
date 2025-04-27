@@ -478,6 +478,72 @@ body._active {
   background: url("../images/excursions/star.png") center/contain no-repeat;
 }
 
+.review-card {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.8125rem;
+  border-radius: 1rem;
+  border: 0.0625rem solid #e5e5e5;
+}
+@media (max-width: 767.98px) {
+  .review-card {
+    padding: 1.25rem;
+  }
+}
+.review-card__text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media (min-width: 91.375em) {
+  .review-card__text {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 26.875em) and (max-width: 91.375em) {
+  @supports (font-size: clamp( 1.375rem , 1.21875rem  +  0.5813953488vw , 1.75rem )) {
+    .review-card__text {
+      font-size: clamp( 1.375rem , 1.21875rem  +  0.5813953488vw , 1.75rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.375rem , 1.21875rem  +  0.5813953488vw , 1.75rem )) {
+    .review-card__text {
+      font-size: calc(1.375rem + 0.375 * (100vw - 26.875rem) / 64.5);
+    }
+  }
+}
+@media (max-width: 26.875em) {
+  .review-card__text {
+    font-size: 1.375rem;
+  }
+}
+.author-review > * {
+  margin-bottom: 0.25rem;
+}
+.author-review > *:last-child {
+  margin-bottom: 0;
+}
+.author-review__avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  aspect-ratio: 56/56;
+  margin-bottom: 0.5rem;
+}
+.author-review__name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.author-review__position {
+  color: #4f4f53;
+}
+
 .header {
   position: absolute;
   z-index: 1000;
@@ -1353,5 +1419,60 @@ body._active .burger::after {
   }
   .excursions__swiper .swiper-slide .adventure-card {
     aspect-ratio: 272/270;
+  }
+}
+
+@media (min-width: 91.375em) {
+  .reviews {
+    padding-block: 5rem;
+  }
+}
+@media (min-width: 26.875em) and (max-width: 91.375em) {
+  @supports (padding-block: clamp( 3rem , 2.1666666667rem  +  3.1007751938vw , 5rem )) {
+    .reviews {
+      padding-block: clamp( 3rem , 2.1666666667rem  +  3.1007751938vw , 5rem );
+    }
+  }
+  @supports not (padding-block: clamp( 3rem , 2.1666666667rem  +  3.1007751938vw , 5rem )) {
+    .reviews {
+      padding-block: calc(3rem + 2 * (100vw - 26.875rem) / 64.5);
+    }
+  }
+}
+@media (max-width: 26.875em) {
+  .reviews {
+    padding-block: 3rem;
+  }
+}
+.reviews__container:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.reviews__header {
+  max-width: 45rem;
+  margin: 0 auto;
+}
+.reviews__swiper {
+  width: 100vw;
+  position: relative;
+  left: -1.25rem;
+}
+@media (max-width: 767.98px) {
+  .reviews__swiper {
+    left: -1rem;
+  }
+}
+.reviews__swiper .swiper-slide {
+  width: 30.9375rem;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.reviews__swiper .swiper-slide .review-card {
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .reviews__swiper .swiper-slide {
+    width: 20rem;
   }
 }

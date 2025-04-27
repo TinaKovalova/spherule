@@ -111,7 +111,7 @@
 }
 .excursion-card {
     position: relative;
-    
+
     font-size: 0;
     border-radius: toRem(16);
     overflow: hidden;
@@ -207,5 +207,58 @@
             height: 1em;
             background: url("../images/excursions/star.png") center/ contain no-repeat;
         }
+    }
+}
+.review-card {
+    padding: toRem(32);
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(29);
+    border-radius: toRem(16);
+    border: toRem(1) solid #e5e5e5;
+    @media (max-width: $mobile) {
+        padding: toRem(20);
+    }
+
+    // .review-card__text
+
+    &__text {
+        @include adaptiveValue("font-size", 28, 22);
+        flex-grow: 1;
+    }
+
+    // .review-card__author-info
+
+    &__author-info {
+    }
+}
+.author-review {
+    & > * {
+        margin-bottom: toRem(4);
+    }
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+    // .author-reviwe__avatar
+
+    &__avatar {
+        width: toRem(56);
+        height: toRem(56);
+        border-radius: 50%;
+        aspect-ratio: 56 / 56;
+        margin-bottom: toRem(8);
+    }
+
+    // .author-reviwe__name
+
+    &__name {
+        font-size: toRem(20);
+        font-weight: 600;
+    }
+
+    // .author-reviwe__position
+
+    &__position {
+        color: $greyColor;
     }
 }

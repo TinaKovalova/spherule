@@ -382,10 +382,6 @@
         @media (max-width: 1439.98px) {
             width: 100vw;
         }
-        & .swiper {
-        }
-        & .swiper-wrapper {
-        }
         & .swiper-slide {
             width: toRem(430);
             min-height: toRem(400);
@@ -393,12 +389,53 @@
                 width: toRem(320);
                 min-height: toRem(280);
             }
-             @media (max-width: 370px) {
-            width: toRem(272);
-            & .adventure-card {
-                aspect-ratio: 272 / 270;
+            @media (max-width: 370px) {
+                width: toRem(272);
+                & .adventure-card {
+                    aspect-ratio: 272 / 270;
+                }
             }
         }
+    }
+}
+
+//reviews section
+.reviews {
+    @include adaptiveValue("padding-block", 80, 48);
+    // .reviews__container
+
+    &__container {
+        &:not(:last-child) {
+            margin-bottom: toRem(40);
+        }
+    }
+
+    // .reviews__header
+
+    &__header {
+        max-width: toRem(720);
+        margin: 0 auto;
+    }
+
+    // .reviews__swiper
+
+    &__swiper {
+        width: 100vw;
+        position: relative;
+        left: toRem(-20);
+        @media (max-width: $mobile) {
+            left: toRem(-16);
+        }
+        & .swiper-slide {
+            width: toRem(495);
+            height: auto;
+            display: flex;
+            & .review-card {
+                width: 100%;
+            }
+            @media (max-width: $mobile) {
+                width: toRem(320);
+            }
         }
     }
 }
