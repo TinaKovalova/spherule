@@ -1,14 +1,17 @@
 .button {
     padding: toRem(12) toRem(20);
     font-weight: 600;
-    text-transform: capitalize;
     text-align: center;
     border-radius: toRem(40);
     border: toRem(1) solid transparent;
     transition: all 0.3s;
+    &::first-letter {
+        text-transform: uppercase;
+    }
 
     &--dark {
         background-color: #000;
+        color: #fff;
     }
     &--gray-border {
         border-color: $greyColor;
@@ -19,6 +22,8 @@
             border-color: #fff;
             &.button--dark {
                 background-color: transparent;
+                color: #000;
+                border-color: #000;
             }
             &.button--gray-border {
                 border-color: #000;
@@ -43,7 +48,6 @@
 
     &__text {
         @include adaptiveValue("font-size", 18, 16);
- 
     }
     &--centered {
         align-items: center;
