@@ -238,13 +238,13 @@ body._active {
 .adventure-card {
   aspect-ratio: 430/400;
   font-size: 0;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 .adventure-card__link {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
-  overflow: hidden;
 }
 .adventure-card__image {
   width: 100%;
@@ -318,6 +318,164 @@ body._active {
         -ms-transform: scale(1.03);
             transform: scale(1.03);
   }
+}
+
+.excursion-card {
+  position: relative;
+  font-size: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.excursion-card__link {
+  width: 100%;
+  height: 100%;
+}
+.excursion-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 430/400;
+}
+.excursion-card__info {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  width: 96.2790697674%;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1rem;
+}
+.excursion-card__info-header {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media (min-width: 91.375em) {
+  .excursion-card__title {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 26.875em) and (max-width: 91.375em) {
+  @supports (font-size: clamp( 1rem , 0.9479166667rem  +  0.1937984496vw , 1.125rem )) {
+    .excursion-card__title {
+      font-size: clamp( 1rem , 0.9479166667rem  +  0.1937984496vw , 1.125rem );
+    }
+  }
+  @supports not (font-size: clamp( 1rem , 0.9479166667rem  +  0.1937984496vw , 1.125rem )) {
+    .excursion-card__title {
+      font-size: calc(1rem + 0.125 * (100vw - 26.875rem) / 64.5);
+    }
+  }
+}
+@media (max-width: 26.875em) {
+  .excursion-card__title {
+    font-size: 1rem;
+  }
+}
+.excursion-card__title:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+.excursion-card__location {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4f4f53;
+}
+.excursion-card__info-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-column-gap: 0.625rem;
+     -moz-column-gap: 0.625rem;
+          column-gap: 0.625rem;
+}
+.excursion-card__price {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: #4f4f53;
+}
+@media (min-width: 91.375em) {
+  .excursion-card__price {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 26.875em) and (max-width: 91.375em) {
+  @supports (font-size: clamp( 0.875rem , 0.8229166667rem  +  0.1937984496vw , 1rem )) {
+    .excursion-card__price {
+      font-size: clamp( 0.875rem , 0.8229166667rem  +  0.1937984496vw , 1rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.875rem , 0.8229166667rem  +  0.1937984496vw , 1rem )) {
+    .excursion-card__price {
+      font-size: calc(0.875rem + 0.125 * (100vw - 26.875rem) / 64.5);
+    }
+  }
+}
+@media (max-width: 26.875em) {
+  .excursion-card__price {
+    font-size: 0.875rem;
+  }
+}
+.excursion-card__price span {
+  font-weight: 600;
+  color: #000;
+}
+@media (min-width: 91.375em) {
+  .excursion-card__price span {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 26.875em) and (max-width: 91.375em) {
+  @supports (font-size: clamp( 1.125rem , 1.0729166667rem  +  0.1937984496vw , 1.25rem )) {
+    .excursion-card__price span {
+      font-size: clamp( 1.125rem , 1.0729166667rem  +  0.1937984496vw , 1.25rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.125rem , 1.0729166667rem  +  0.1937984496vw , 1.25rem )) {
+    .excursion-card__price span {
+      font-size: calc(1.125rem + 0.125 * (100vw - 26.875rem) / 64.5);
+    }
+  }
+}
+@media (max-width: 26.875em) {
+  .excursion-card__price span {
+    font-size: 1.125rem;
+  }
+}
+.excursion-card__rate-lable {
+  min-width: 3.375rem;
+  border-radius: 3rem;
+  padding-inline: 0.5rem;
+  background-color: #f2dbb1;
+  color: #dd9115;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.25rem;
+     -moz-column-gap: 0.25rem;
+          column-gap: 0.25rem;
+  font-size: 0.875rem;
+}
+.excursion-card__rate-lable::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background: url("../images/excursions/star.png") center/contain no-repeat;
 }
 
 .header {
@@ -1100,4 +1258,100 @@ body._active .burger::after {
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 576/480;
+}
+
+.excursions__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 2.5rem;
+}
+@media (min-width: 91.375em) {
+  .excursions__container {
+    padding-block: 5rem;
+  }
+}
+@media (min-width: 26.875em) and (max-width: 91.375em) {
+  @supports (padding-block: clamp( 3rem , 2.1666666667rem  +  3.1007751938vw , 5rem )) {
+    .excursions__container {
+      padding-block: clamp( 3rem , 2.1666666667rem  +  3.1007751938vw , 5rem );
+    }
+  }
+  @supports not (padding-block: clamp( 3rem , 2.1666666667rem  +  3.1007751938vw , 5rem )) {
+    .excursions__container {
+      padding-block: calc(3rem + 2 * (100vw - 26.875rem) / 64.5);
+    }
+  }
+}
+@media (max-width: 26.875em) {
+  .excursions__container {
+    padding-block: 3rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .excursions__container {
+    row-gap: 2rem;
+  }
+}
+.excursions__header {
+  max-width: 45rem;
+}
+.excursions__header .section-header__text {
+  color: #4f4f53;
+}
+@media (min-width: 91.375em) {
+  .excursions__header .section-header__text {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 26.875em) and (max-width: 91.375em) {
+  @supports (font-size: clamp( 1rem , 0.9479166667rem  +  0.1937984496vw , 1.125rem )) {
+    .excursions__header .section-header__text {
+      font-size: clamp( 1rem , 0.9479166667rem  +  0.1937984496vw , 1.125rem );
+    }
+  }
+  @supports not (font-size: clamp( 1rem , 0.9479166667rem  +  0.1937984496vw , 1.125rem )) {
+    .excursions__header .section-header__text {
+      font-size: calc(1rem + 0.125 * (100vw - 26.875rem) / 64.5);
+    }
+  }
+}
+@media (max-width: 26.875em) {
+  .excursions__header .section-header__text {
+    font-size: 1rem;
+  }
+}
+.excursions__swiper {
+  position: relative;
+  width: 100%;
+}
+@media (max-width: 1439.98px) {
+  .excursions__swiper {
+    width: 100vw;
+  }
+}
+.excursions__swiper .swiper-slide {
+  width: 26.875rem;
+  min-height: 25rem;
+}
+@media (max-width: 767.98px) {
+  .excursions__swiper .swiper-slide {
+    width: 20rem;
+    min-height: 17.5rem;
+  }
+}
+@media (max-width: 370px) {
+  .excursions__swiper .swiper-slide {
+    width: 17rem;
+  }
+  .excursions__swiper .swiper-slide .adventure-card {
+    aspect-ratio: 272/270;
+  }
 }

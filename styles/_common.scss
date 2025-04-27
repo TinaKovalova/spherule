@@ -57,6 +57,8 @@
 .adventure-card {
     aspect-ratio: 430 / 400;
     font-size: 0;
+    border-radius: toRem(16);
+    overflow: hidden;
 
     // .adventure-card__link
 
@@ -64,8 +66,6 @@
         position: relative;
         width: 100%;
         height: 100%;
-        border-radius: toRem(16);
-        overflow: hidden;
     }
 
     // .adventure-card__image
@@ -106,6 +106,106 @@
     @media (any-hover: hover) {
         &:hover .adventure-card__image {
             transform: scale(1.03);
+        }
+    }
+}
+.excursion-card {
+    position: relative;
+    
+    font-size: 0;
+    border-radius: toRem(16);
+    overflow: hidden;
+
+    // .excursion-card__link
+
+    &__link {
+        width: 100%;
+        height: 100%;
+    }
+
+    // .excursion-card__image
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 430 / 400;
+    }
+
+    // .excursion-card__info
+
+    &__info {
+        position: absolute;
+        left: toRem(8);
+        bottom: toRem(8);
+        width: toPercent(414, 430);
+        border-radius: toRem(16);
+        padding: toRem(16);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(16);
+    }
+    //excursion-card__info-header
+    &__info-header {
+        flex-grow: 1;
+    }
+
+    // .excursion-card__title
+
+    &__title {
+        @include adaptiveValue("font-size", 18, 16);
+        &:not(:last-child) {
+            margin-bottom: toRem(4);
+        }
+    }
+
+    // .excursion-card__location
+
+    &__location {
+        font-size: toRem(14);
+        font-weight: 500;
+        color: $greyColor;
+    }
+
+    // .excursion-card__info-footer
+
+    &__info-footer {
+        display: flex;
+        align-items: flex-end;
+        column-gap: toRem(10);
+    }
+
+    // .excursion-card__price
+
+    &__price {
+        flex-grow: 1;
+        color: $greyColor;
+        @include adaptiveValue("font-size", 16, 14);
+        & span {
+            @include adaptiveValue("font-size", 20, 18);
+            font-weight: 600;
+            color: #000;
+        }
+    }
+
+    // .excursion-card__rate-lable
+
+    &__rate-lable {
+        min-width: toRem(54);
+        border-radius: toRem(48);
+        padding-inline: toRem(8);
+        background-color: #f2dbb1;
+        color: #dd9115;
+        display: flex;
+        align-items: center;
+        column-gap: toRem(4);
+        font-size: toRem(14);
+        &::before {
+            content: "";
+            width: 1em;
+            height: 1em;
+            background: url("../images/excursions/star.png") center/ contain no-repeat;
         }
     }
 }
