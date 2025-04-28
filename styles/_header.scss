@@ -124,11 +124,6 @@
         row-gap: toRem(10);
     }
 
-    // .navigation__item
-
-    &__item {
-    }
-
     // .navigation__link
 
     &__link {
@@ -150,10 +145,6 @@
 .actions {
     display: flex;
     column-gap: toRem(12);
-    // .actions__button
-
-    &__button {
-    }
 }
 .burger {
     flex-shrink: 0;

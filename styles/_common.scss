@@ -209,7 +209,7 @@
             content: "";
             width: 1em;
             height: 1em;
-            background: url("../images/excursions/star.png") center/ contain no-repeat;
+            background: url("../images/excursions/star.webp") center/ contain no-repeat;
         }
     }
 }
@@ -229,11 +229,6 @@
     &__text {
         @include adaptiveValue("font-size", 28, 22);
         flex-grow: 1;
-    }
-
-    // .review-card__author-info
-
-    &__author-info {
     }
 }
 .author-review {
