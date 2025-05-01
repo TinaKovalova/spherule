@@ -155,6 +155,10 @@ body._active {
   border-color: #4f4f53;
   color: #4f4f53;
 }
+.button--white {
+  background-color: #fff;
+  color: #000;
+}
 @media (any-hover: hover) {
   .button:hover {
     border-color: #fff;
@@ -164,7 +168,7 @@ body._active {
     color: #000;
     border-color: #000;
   }
-  .button:hover.button--gray-border {
+  .button:hover.button--gray-border, .button:hover.button--white {
     color: #fff;
     background-color: #4f4f53;
   }
@@ -641,7 +645,7 @@ body._active {
     padding-inline: 1.25rem;
   }
   .header__menu .button {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     padding: 1.0625rem 1.5625rem;
   }
   body._active .header__menu {
@@ -670,12 +674,12 @@ body._active {
 }
 @media (max-width: 991.98px) {
   .header__nav .navigation__list {
-    font-size: 1.75rem;
+    font-size: 1.375rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    row-gap: 3rem;
+    row-gap: 2.1875rem;
   }
 }
 .header__actions {
@@ -1640,4 +1644,228 @@ body._active .burger::after {
   .start-adventure__button {
     min-width: 100%;
   }
+}
+
+.footer__container {
+  border-radius: 1rem;
+  background-color: #000;
+  color: #fff;
+  -webkit-padding-before: 3rem;
+          padding-block-start: 3rem;
+  -webkit-padding-after: 1.5rem;
+          padding-block-end: 1.5rem;
+}
+.footer__container > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+@media (max-width: 991.98px) {
+  .footer__container > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+}
+@media (max-width: 991.98px) {
+  .footer__top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__top {
+    font-size: 0.875rem;
+  }
+}
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  row-gap: 2rem;
+}
+@media (max-width: 991.98px) {
+  .footer__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+.footer__header {
+  max-width: 43.75rem;
+}
+@media (max-width: 991.98px) {
+  .footer__header {
+    max-width: 100%;
+  }
+}
+.footer__logo:not(:last-child) {
+  margin-bottom: 1rem;
+}
+@media (min-width: 479.98px) {
+  .footer__logo {
+    -webkit-column-gap: 0.6875rem;
+       -moz-column-gap: 0.6875rem;
+            column-gap: 0.6875rem;
+  }
+  .footer__logo::before {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .footer__logo .logo__text {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__logo:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .footer__navigation {
+    width: 100%;
+  }
+}
+.footer__navigation .navigation__list {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+@media (max-width: 37.5rem) {
+  .footer__navigation .navigation__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    max-height: 6.25rem;
+    gap: 1rem 2rem;
+  }
+}
+.footer__navigation .navigation__item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 37.5rem) {
+  .footer__navigation .navigation__item {
+    width: 35%;
+  }
+}
+.footer__form {
+  -ms-flex-preferred-size: 27.5rem;
+      flex-basis: 27.5rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.footer__form .subscribe-form__title {
+  font-size: 1.125rem;
+}
+@media (max-width: 767.98px) {
+  .footer__form {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    font-size: 0.875rem;
+  }
+}
+.footer__bottom {
+  -webkit-padding-before: 2rem;
+          padding-block-start: 2rem;
+  border-top: 0.0625rem solid #4f4f53;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+.subscribe-form {
+  gap: 1rem;
+}
+.subscribe-form__title {
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.subscribe-form__title:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.subscribe-form__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 479.98px) {
+  .subscribe-form__actions {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.subscribe-form__input {
+  width: 70%;
+  min-width: 15.625rem;
+  text-overflow: ellipsis;
+  padding-inline: 1.25rem;
+  height: 2.9375rem;
+  border: 0.0625rem solid #fff;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+          box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border-radius: 3.125rem;
+}
+.subscribe-form__input::-webkit-input-placeholder {
+  color: #fff;
+}
+.subscribe-form__input::-moz-placeholder {
+  color: #fff;
+}
+.subscribe-form__input:-ms-input-placeholder {
+  color: #fff;
+}
+.subscribe-form__input::-ms-input-placeholder {
+  color: #fff;
+}
+.subscribe-form__input::placeholder {
+  color: #fff;
+}
+@media (max-width: 479.98px) {
+  .subscribe-form__input {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+@media (max-width: 479.98px) {
+  .subscribe-form__btn {
+    width: 100%;
+  }
+}
+
+.list-privacy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem 2rem;
 }

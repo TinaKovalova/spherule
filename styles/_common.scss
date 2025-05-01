@@ -17,6 +17,10 @@
         border-color: $greyColor;
         color: $greyColor;
     }
+    &--white {
+        background-color: #fff;
+        color: #000;
+    }
     @media (any-hover: hover) {
         &:hover {
             border-color: #fff;
@@ -25,7 +29,8 @@
                 color: #000;
                 border-color: #000;
             }
-            &.button--gray-border {
+            &.button--gray-border,
+            &.button--white {
                 color: #fff;
                 background-color: $greyColor;
             }
