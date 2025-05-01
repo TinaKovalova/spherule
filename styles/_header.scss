@@ -50,7 +50,6 @@
 
             & .button {
                 font-size: toRem(18);
-                padding: toRem(17) toRem(25);
             }
             body._active & {
                 transform: translateX(0);
@@ -71,9 +70,9 @@
         }
         & .navigation__list {
             @media (max-width: $tablet) {
-                font-size: toRem(22);
+                font-size: toRem(20);
                 flex-direction: column;
-                row-gap: toRem(35);
+                row-gap: toRem(27);
             }
         }
     }
