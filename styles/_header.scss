@@ -124,7 +124,7 @@
     // .navigation__link
 
     &__link {
-        @extend .hovered-link;
+        @include hovered-link(#ffffff);
         text-transform: capitalize;
         position: relative;
     }

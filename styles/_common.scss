@@ -29,7 +29,10 @@
                 color: #000;
                 border-color: #000;
             }
-            &.button--gray-border,
+            &.button--gray-border {
+                background-color: $greyColor;
+                color: #fff;
+            }
             &.button--white {
                 color: #fff;
                 background-color: transparent;
@@ -64,11 +67,11 @@
     font-size: 0;
     border-radius: toRem(16);
     overflow: hidden;
+    position: relative;
 
     // .adventure-card__link
 
     &__link {
-        position: relative;
         width: 100%;
         height: 100%;
     }
@@ -94,6 +97,10 @@
         padding-block: toRem(31);
         color: #fff;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+    }
+    //adventure-card__city-link
+    &__city-link {
+        @include hovered-link(#ffffff, 0.05em, 0.2em);
     }
 
     // .adventure-card__city
@@ -159,7 +166,10 @@
     &__info-header {
         flex-grow: 1;
     }
-
+    //excursion-card__title-link
+    &__title-link {
+        @include hovered-link(#000000);
+    }
     // .excursion-card__title
 
     &__title {
@@ -266,17 +276,5 @@
         color: $greyColor;
     }
 }
-.hovered-link {
-    text-decoration: underline rgba(255, 255, 255, 0);
-    text-underline-offset: 0.2em;
-    transition:
-        text-decoration-color 0.3s,
-        text-underline-offset 0.3s;
-    will-change: text-decoration-color;
-    @media (any-hover: hover) {
-        &:hover {
-            text-decoration-color: rgba(255, 255, 255, 1);
-            text-underline-offset: 0.3em;
-        }
-    }
-}
+
+//  text-decoration-color: rgba(($color: #000000),$alpha:  0);

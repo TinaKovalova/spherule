@@ -168,7 +168,11 @@ body._active {
     color: #000;
     border-color: #000;
   }
-  .button:hover.button--gray-border, .button:hover.button--white {
+  .button:hover.button--gray-border {
+    background-color: #4f4f53;
+    color: #fff;
+  }
+  .button:hover.button--white {
     color: #fff;
     background-color: transparent;
   }
@@ -244,9 +248,9 @@ body._active {
   font-size: 0;
   border-radius: 1rem;
   overflow: hidden;
+  position: relative;
 }
 .adventure-card__link {
-  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -271,6 +275,20 @@ body._active {
   color: #fff;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+}
+.adventure-card__city-link {
+  text-decoration-line: underline;
+  text-decoration-color: rgba(255, 255, 255, 0);
+  text-underline-offset: textUnderlineOffsetBase;
+  -webkit-transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
+  transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
+  will-change: text-decoration-color;
+}
+@media (any-hover: hover) {
+  .adventure-card__city-link:hover {
+    text-decoration-color: white;
+    text-underline-offset: 0.2em;
+  }
 }
 @media (min-width: 91.375em) {
   .adventure-card__city {
@@ -373,6 +391,20 @@ body._active {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+.excursion-card__title-link {
+  text-decoration-line: underline;
+  text-decoration-color: rgba(0, 0, 0, 0);
+  text-underline-offset: textUnderlineOffsetBase;
+  -webkit-transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
+  transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
+  will-change: text-decoration-color;
+}
+@media (any-hover: hover) {
+  .excursion-card__title-link:hover {
+    text-decoration-color: black;
+    text-underline-offset: 0.3em;
+  }
 }
 @media (min-width: 91.375em) {
   .excursion-card__title {
@@ -560,21 +592,6 @@ body._active {
   color: #4f4f53;
 }
 
-.hovered-link, .list-privacy__link, .navigation__link {
-  -webkit-text-decoration: underline rgba(255, 255, 255, 0);
-          text-decoration: underline rgba(255, 255, 255, 0);
-  text-underline-offset: 0.2em;
-  -webkit-transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
-  transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
-  will-change: text-decoration-color;
-}
-@media (any-hover: hover) {
-  .hovered-link:hover, .list-privacy__link:hover, .navigation__link:hover {
-    text-decoration-color: rgb(255, 255, 255);
-    text-underline-offset: 0.3em;
-  }
-}
-
 .header {
   position: absolute;
   z-index: 1000;
@@ -755,8 +772,20 @@ body._active {
   row-gap: 0.625rem;
 }
 .navigation__link {
+  text-decoration-line: underline;
+  text-decoration-color: rgba(255, 255, 255, 0);
+  text-underline-offset: textUnderlineOffsetBase;
+  -webkit-transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
+  transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
+  will-change: text-decoration-color;
   text-transform: capitalize;
   position: relative;
+}
+@media (any-hover: hover) {
+  .navigation__link:hover {
+    text-decoration-color: white;
+    text-underline-offset: 0.3em;
+  }
 }
 .actions {
   display: -webkit-box;
@@ -949,6 +978,14 @@ body._active .burger::after {
     font-size: 0.875rem;
   }
 }
+@media (any-hover: hover) {
+  .hero__link.button:hover {
+    border-color: #fff;
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
 .statistic {
   position: relative;
 }
@@ -1871,4 +1908,18 @@ body._active .burger::after {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 1rem 2rem;
+}
+.list-privacy__link {
+  text-decoration-line: underline;
+  text-decoration-color: rgba(255, 255, 255, 0);
+  text-underline-offset: textUnderlineOffsetBase;
+  -webkit-transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
+  transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
+  will-change: text-decoration-color;
+}
+@media (any-hover: hover) {
+  .list-privacy__link:hover {
+    text-decoration-color: white;
+    text-underline-offset: 0.3em;
+  }
 }

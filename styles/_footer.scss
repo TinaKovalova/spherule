@@ -203,6 +203,6 @@
     gap: toRem(16) toRem(32);
 
     &__link {
-        @extend .hovered-link;
+        @include hovered-link(rgb(255, 255, 255));
     }
 }

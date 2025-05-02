@@ -63,7 +63,14 @@
 
     // .hero__link
 
-    &__link {
+    &__link.button {
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: #fff;
+                color: #fff;
+                border-color: #fff;
+            }
+        }
     }
 }
 
@@ -511,4 +518,3 @@
         }
     }
 }
-

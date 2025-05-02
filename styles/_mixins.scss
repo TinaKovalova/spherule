@@ -82,4 +82,18 @@
     }
 }
 
-
+@mixin hovered-link($rgbColor, $textUnderlineOffsetBase: 0.1em, $textUnderlineOffsetFinal: 0.3em) {
+    text-decoration-line: underline;
+    text-decoration-color: rgba($rgbColor, 0);
+    text-underline-offset: textUnderlineOffsetBase;
+    transition:
+        text-decoration-color 0.3s,
+        text-underline-offset 0.3s;
+    will-change: text-decoration-color;
+    @media (any-hover: hover) {
+        &:hover {
+            text-decoration-color: rgba($rgbColor, 1);
+            text-underline-offset: $textUnderlineOffsetFinal;
+        }
+    }
+}
