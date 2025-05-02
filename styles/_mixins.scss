@@ -19,7 +19,6 @@
     @return $result;
 }
 
-
 // Адаптивна властивість (clamp)
 @mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
     @if ($startSize==0) {
@@ -82,3 +81,5 @@
         }
     }
 }
+
+

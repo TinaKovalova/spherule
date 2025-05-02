@@ -124,17 +124,9 @@
     // .navigation__link
 
     &__link {
-        will-change: transform, text-decoration;
-        transition: transform 0.3s;
+        @extend .hovered-link;
         text-transform: capitalize;
         position: relative;
-
-        @media (any-hover: hover) {
-            &:hover {
-                transform: translateY(-20%);
-                text-decoration: underline;
-            }
-        }
     }
     @media (max-width: $tablet) {
     }
