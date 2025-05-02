@@ -277,4 +277,29 @@
     }
 }
 
-//  text-decoration-color: rgba(($color: #000000),$alpha:  0);
+.button-up {
+    position: fixed;
+    z-index: 50;
+    right: toRem(30);
+    bottom: toRem(70);
+    width: toRem(45);
+    height: toRem(45);
+    border-radius: 50%;
+    transform: rotate(90deg);
+    background-color: rgba(79, 79, 83, 0.5);
+    border-radius: toRem(1px) solid rgba(79, 79, 83, 0.5);
+    box-shadow:
+        rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.05) 0px 8px 16px;
+    background:
+        url("../images/icons/arrow.svg") center / 65% 65% no-repeat,
+        rgba(79, 79, 83, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+
+    &.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
