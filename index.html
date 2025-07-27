@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <title>Spherule</title>
 </head>
 
@@ -50,7 +53,12 @@
             <section class="hero">
                 <div class="hero__container">
                     <div class="hero__background">
-                        <img class="hero__background-image" src="images/hero-bg.webp" alt="breathtaking view">
+                        <picture class="hero__background-image">
+                            <source media="(max-width:992px)" srcset="images/hero/hero_992.webp"
+                                class="hero__background-image">
+                            <img src="images/hero/hero_1400.webp" alt="breathtaking view"
+                                class="hero__background-image">
+                        </picture>
                     </div>
                     <div class="hero__content" id="home">
                         <div class="hero__header section-header section-header--centered">
@@ -109,8 +117,8 @@
                                 <div class="swiper-slide">
                                     <article class="adventure-card">
                                         <a href="#" class="adventure-card__link">
-                                            <img class="adventure-card__image" src="images/explore/location_01.webp"
-                                                alt="Oslo">
+                                            <img class="adventure-card__image" loading="lazy"
+                                                src="images/explore/location_01.webp" alt="Oslo">
                                         </a>
                                         <div class="adventure-card__content">
                                             <h5 class="adventure-card__city">
@@ -123,8 +131,8 @@
                                 <div class="swiper-slide">
                                     <article class="adventure-card">
                                         <a href="#" class="adventure-card__link">
-                                            <img class="adventure-card__image" src="images/explore/location_02.webp"
-                                                alt="Bergen">
+                                            <img class="adventure-card__image" loading="lazy"
+                                                src="images/explore/location_02.webp" alt="Bergen">
                                         </a>
                                         <div class="adventure-card__content">
                                             <h5 class="adventure-card__city">
@@ -137,8 +145,8 @@
                                 <div class="swiper-slide">
                                     <article class="adventure-card">
                                         <a href="#" class="adventure-card__link">
-                                            <img class="adventure-card__image" src="images/explore/location_03.webp"
-                                                alt="Tromsø">
+                                            <img class="adventure-card__image" loading="lazy"
+                                                src="images/explore/location_03.webp" alt="Tromsø">
                                         </a>
                                         <div class="adventure-card__content">
                                             <h5 class="adventure-card__city">
@@ -151,8 +159,8 @@
                                 <div class="swiper-slide">
                                     <article class="adventure-card">
                                         <a href="#" class="adventure-card__link">
-                                            <img class="adventure-card__image" src="images/explore/location_02.webp"
-                                                alt="Tromsø">
+                                            <img class="adventure-card__image" loading="lazy"
+                                                src="images/explore/location_02.webp" alt="Tromsø">
                                         </a>
                                         <div class="adventure-card__content">
                                             <h5 class="adventure-card__city">
@@ -189,7 +197,7 @@
                             <li class="guide__item">
                                 <div class="guide__item-image-block">
                                     <img class="guide__item-image" src="images/icons/destination.svg"
-                                        alt="location point">
+                                        alt="location point" loading="lazy">
                                 </div>
                                 <div class="guide__item-text">
                                     <div class="guide__title">Choose Your Destination</div>
@@ -243,7 +251,8 @@
                                 <div class="swiper-slide">
                                     <article class="excursion-card">
                                         <a href="#" class="excursion-card__link">
-                                            <img class="excursion-card__image" src="images/excursions/01.webp" alt="">
+                                            <img class="excursion-card__image" loading="lazy"
+                                                src="images/excursions/01.webp" alt="">
                                         </a>
                                         <div class="excursion-card__info">
                                             <div class="excursion-card__info-header">
@@ -264,7 +273,8 @@
                                 <div class="swiper-slide">
                                     <article class="excursion-card">
                                         <a href="#" class="excursion-card__link">
-                                            <img class="excursion-card__image" src="images/excursions/02.webp" alt="">
+                                            <img class="excursion-card__image" loading="lazy"
+                                                src="images/excursions/02.webp" alt="">
                                         </a>
                                         <div class="excursion-card__info">
                                             <div class="excursion-card__info-header">
@@ -285,7 +295,8 @@
                                 <div class="swiper-slide">
                                     <article class="excursion-card">
                                         <a href="#" class="excursion-card__link">
-                                            <img class="excursion-card__image" src="images/excursions/03.webp" alt="">
+                                            <img class="excursion-card__image" loading="lazy"
+                                                src="images/excursions/03.webp" alt="">
                                         </a>
                                         <div class="excursion-card__info">
                                             <div class="excursion-card__info-header">
@@ -306,7 +317,8 @@
                                 <div class="swiper-slide">
                                     <article class="excursion-card">
                                         <a href="#" class="excursion-card__link">
-                                            <img class="excursion-card__image" src="images/excursions/02.webp" alt="">
+                                            <img class="excursion-card__image" loading="lazy"
+                                                src="images/excursions/02.webp" alt="">
                                         </a>
                                         <div class="excursion-card__info">
                                             <div class="excursion-card__info-header">
@@ -343,7 +355,7 @@
                     <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <article class="review-card">
+                                <div class="review-card">
                                     <div class="review-card__text">
                                         "I didn’t just visit Norway—I experienced its soul. A magical journey
                                         through fjords and mountains."
@@ -353,10 +365,10 @@
                                         <div class="author-review__name">Jordan Blake</div>
                                         <div class="author-review__position">Co-Founder,SnapWave</div>
                                     </div>
-                                </article>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <article class="review-card">
+                                <div class="review-card">
                                     <div class="review-card__text">
                                         "With this platform, I discovered hidden gems, from Arctic landscapes to
                                         cozy Scandinavian villages."
@@ -366,10 +378,10 @@
                                         <div class="author-review__name">Taylor Morgan</div>
                                         <div class="author-review__position">Co-Founder, ClipNest</div>
                                     </div>
-                                </article>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <article class="review-card">
+                                <div class="review-card">
                                     <div class="review-card__text">
                                         "Exploring the vibrant culture of Norway opened my eyes
                                         to new traditions and
@@ -380,10 +392,10 @@
                                         <div class="author-review__name">Avery Chen</div>
                                         <div class="author-review__position">Co-Founder, TrendSphere</div>
                                     </div>
-                                </article>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <article class="review-card">
+                                <div class="review-card">
                                     <div class="review-card__text">
                                         "With this platform, I discovered hidden gems, from Arctic landscapes to
                                         cozy Scandinavian villages."
@@ -393,10 +405,10 @@
                                         <div class="author-review__name">Taylor Morgan</div>
                                         <div class="author-review__position">Co-Founder, ClipNest</div>
                                     </div>
-                                </article>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <article class="review-card">
+                                <div class="review-card">
                                     <div class="review-card__text">
                                         "With this platform, I discovered hidden gems, from Arctic landscapes to
                                         cozy Scandinavian villages."
@@ -406,7 +418,7 @@
                                         <div class="author-review__name">Taylor Morgan</div>
                                         <div class="author-review__position">Co-Founder, ClipNest</div>
                                     </div>
-                                </article>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -482,13 +494,13 @@
                     </div>
                     <ul class="footer__privacy-list list-privacy">
                         <li class="list-privacy__item">
-                            <a href="" class="list-privacy__link">Terms</a>
+                            <a href="#" class="list-privacy__link">Terms</a>
                         </li>
                         <li class="list-privacy__item">
-                            <a href="" class="list-privacy__link">Privacy</a>
+                            <a href="#" class="list-privacy__link">Privacy</a>
                         </li>
                         <li class="list-privacy__item">
-                            <a href="" class="list-privacy__link">Cookies</a>
+                            <a href="#" class="list-privacy__link">Cookies</a>
                         </li>
                     </ul>
                 </div>
