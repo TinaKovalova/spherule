@@ -85,6 +85,7 @@
 
 .statistic {
     position: relative;
+    z-index: 3;
 
     @media (min-width: $tablet) {
         padding-inline: toRem(49);

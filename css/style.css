@@ -1025,6 +1025,7 @@ body._active .burger::after {
 
 .statistic {
   position: relative;
+  z-index: 3;
 }
 @media (min-width: 991.98px) {
   .statistic {
