@@ -128,12 +128,20 @@
         text-transform: capitalize;
         position: relative;
     }
-    @media (max-width: $tablet) {
-    }
 }
 .actions {
     display: flex;
     column-gap: toRem(12);
+
+    .button {
+        @media (any-hover: hover) {
+            &:hover.button--dark {
+                color: #fff;
+                background-color: transparent;
+                border-color: #fff;
+            }
+        }
+    }
 }
 .burger {
     flex-shrink: 0;
